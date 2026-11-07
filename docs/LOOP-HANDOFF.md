@@ -1,4 +1,4 @@
-# Hackrange loop handoff (2026-11-06, late night)
+# Hackrange loop handoff (2026-11-07, morning)
 
 ## What the loop is
 
@@ -9,8 +9,8 @@ RULES.md binds it. Targets are 127.0.0.1 or a listed training platform, nothing 
 ## Where things stand
 
 - Public repo nulljosh/hackrange under Apache 2.0, with a v0.1.0 release on GitHub.
-- Hero terminal animation (b8ce626) types out a real pentest session and loops. The visibility fix (59cf6eb) centers and brightens it; it is deployed to Cloudflare Pages.
-- Cache-bust is shipped: the CSS and JS links in web/index.html carry a version query (?v=20261106b), and the hero renders live in Joshua's browser. The loop is effectively complete: A+ hero landing and parallax, confirmed by Joshua.
+- Hero terminal animation (b8ce626) types out a real pentest session and loops. The visibility fix (59cf6eb) centers and brightens it. The contrast follow-up (a5abe1a) takes the session text to full opacity in a brighter green and lightens the scrim behind the copy; it is deployed to Cloudflare Pages.
+- Cache-bust is shipped: the CSS and JS links in web/index.html carry a version query (?v=20261107a), and the hero renders live in Joshua's browser. The hero is fully done, confirmed by Joshua.
 - Landing is live at hackrange.jaybulb.com (and hackrange.pages.dev), deployed with `env -u CLOUDFLARE_API_TOKEN npx wrangler pages deploy web --project-name hackrange`. A push deploys nothing.
 - Benchmark 19/19: pentest 9/9, reverse engineering 2/2, LeetCode 8/8. Every pentest solve is checked against Juice Shop's own `/api/Challenges` scoreboard.
 - crackme2 is now XOR-obfuscated, so `strings` finds nothing in it. Crackme binaries are gitignored; rebuild with `re/build.sh`.
