@@ -48,8 +48,9 @@ Solve order is in `re/progress.md`. Don't peek at the `.c` source until you've s
 that's the whole exercise. Solutions are in `re/solutions.md` (spoilers). Yes, the source is right there, and so are the answers. Reading them first only cheats you.
 
 ## Rules
-Only attack Juice Shop on localhost and the crackmes in this repo. Never point these
-techniques at anything you don't own or don't have written permission to test.
+Only attack Juice Shop on localhost, the crackmes in this repo, and platforms that invite it. Never point these
+techniques at anything you don't own or don't have written permission to test. The full rules of engagement are in
+[RULES.md](RULES.md). Read them first.
 
 ## Architecture
 
