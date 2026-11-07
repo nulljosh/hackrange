@@ -136,19 +136,19 @@ h3 { font-size: 28px; line-height: 32px; font-weight: 600; letter-spacing: -.02e
 /* Hero: one cohesive pentest session, dimmed behind the copy, drifting on scroll (parallax in landing.js). */
 .hero { position: relative; isolation: isolate; overflow: hidden; min-height: calc(100svh - 56px); display: grid; align-items: center; }
 .hero-copy { position: relative; z-index: 2; transform: translate3d(0, var(--cy, 0), 0); opacity: var(--co, 1); }
-.hero::before { content: ""; position: absolute; inset: 0; z-index: 1; pointer-events: none; background: radial-gradient(ellipse 72% 60% at 50% 50%, color-mix(in srgb, var(--bg) 78%, transparent) 30%, transparent 78%); }
+.hero::before { content: ""; position: absolute; inset: 0; z-index: 1; pointer-events: none; background: radial-gradient(ellipse 66% 52% at 50% 50%, color-mix(in srgb, var(--bg) 58%, transparent) 28%, transparent 80%); }
 .hero::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 30%; z-index: 1; pointer-events: none; background: linear-gradient(transparent, var(--bg)); }
 .hero-bg { position: absolute; inset: 0; z-index: 0; pointer-events: none; display: grid; place-items: center; transform: translate3d(0, var(--py, 0), 0) scale(1.04); will-change: transform; }
 .session-wrap { width: max-content; max-width: 92vw; margin-inline: auto; }
-.session { font-family: var(--mono); font-size: clamp(13px, 1.5vw, 19px); line-height: 1.75; margin: 0; white-space: pre; overflow: hidden; color: #43b14e; opacity: .85; text-align: left; }
+.session { font-family: var(--mono); font-size: clamp(13px, 1.5vw, 19px); line-height: 1.75; margin: 0; white-space: pre; overflow: hidden; color: #5bd45f; opacity: 1; text-align: left; }
 .session .c { color: #6fe06a; font-weight: 600; }
 .session .g { color: #8fff86; }
-@media (prefers-color-scheme: dark) { .session { color: #4fbf58; opacity: .8; } }
+@media (prefers-color-scheme: dark) { .session { color: #5bd45f; opacity: 1; } }
 .hero-copy { text-shadow: 0 2px 28px var(--bg), 0 0 10px var(--bg); }
 @media (max-width: 760px) {
   .hero-bg { place-items: start center; padding-top: 80px; transform: translate3d(0, var(--py, 0), 0) scale(1.04); }
   .session-wrap { max-width: 94vw; }
-  .session { font-size: 14px; line-height: 2; opacity: .8; }
+  .session { font-size: 14px; line-height: 2; opacity: 1; }
   .hero::before { background: radial-gradient(ellipse 150% 44% at 50% 44%, color-mix(in srgb, var(--bg) 76%, transparent) 30%, transparent 82%); }
   .hero::after { height: 22%; }
 }
