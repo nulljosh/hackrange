@@ -32,6 +32,12 @@ Useful tools once it's running:
 - `gobuster dir -u http://localhost:3000 -w <wordlist>` , find hidden endpoints
 - `nmap -sV localhost` , see what's actually listening
 
+## Benchmark
+
+Prove it works and time it: `python3 -I bench/bench.py`. It runs real solves against a local
+Juice Shop and the crackmes, and scores each one against the app's own scoreboard so nothing is faked.
+See [bench/README.md](bench/README.md).
+
 ## Track 2 , Reverse engineering (crackmes)
 
 `re/crackmes/` has tiny C programs compiled without debug symbols. Each one hides a secret
