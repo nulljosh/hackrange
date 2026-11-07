@@ -133,20 +133,24 @@ h3 { font-size: 28px; line-height: 32px; font-weight: 600; letter-spacing: -.02e
 .start { max-width: 640px; margin: var(--sp-7) auto 0; }
 .rules { margin-top: var(--sp-9); }
 
-/* Hero: six real captures behind the copy, blended into the page. Parallax in landing.js. */
+/* Hero: one cohesive pentest session, dimmed behind the copy, drifting on scroll (parallax in landing.js). */
 .hero { position: relative; isolation: isolate; overflow: hidden; min-height: calc(100svh - 56px); display: grid; align-items: center; }
 .hero-copy { position: relative; z-index: 2; transform: translate3d(0, var(--cy, 0), 0); opacity: var(--co, 1); }
-.hero::before { content: ""; position: absolute; inset: 0; z-index: 1; pointer-events: none; background: radial-gradient(ellipse 58% 52% at 50% 50%, var(--bg) 50%, transparent 100%); }
-.hero::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 28%; z-index: 1; pointer-events: none; background: linear-gradient(transparent, var(--bg)); }
-.hero-bg { position: absolute; inset: 0; z-index: 0; pointer-events: none; transform: translate3d(0, var(--py, 0), 0); will-change: transform; }
-.wall { height: 100%; max-width: 1440px; margin: 0 auto; padding: var(--sp-6); display: grid; grid-template-columns: repeat(3, 1fr); grid-auto-rows: 300px; gap: var(--sp-5); align-content: center; opacity: .8; }
-.t { background: var(--bg2); border: 1px solid var(--border); padding: var(--sp-5); overflow: hidden; font-size: 12px; line-height: 18px; color: var(--sub); }
-.t b { font-weight: 600; color: var(--accent); }
-@media (max-width: 900px) { .wall { grid-template-columns: repeat(2, 1fr); } .wall .t:nth-child(n+5) { display: none; } }
-@media (max-width: 600px) {
-  .nav { grid-template-columns: auto 1fr; } .nav-brand { grid-column: 1; } .nav-end { grid-column: 2; justify-self: end; }
-  .wall { padding: var(--sp-3); gap: var(--sp-3); grid-auto-rows: 200px; align-content: space-between; opacity: .5; }
-  .t { font-size: 10px; line-height: 14px; padding: var(--sp-3); }
-  .hero::before { background: radial-gradient(ellipse 120% 46% at 50% 50%, var(--bg) 62%, transparent 100%); }
-  .term { padding: var(--sp-5); font-size: 12px; line-height: 18px; }
-}
+.hero::before { content: ""; position: absolute; inset: 0; z-index: 1; pointer-events: none; background: radial-gradient(ellipse 62% 56% at 50% 50%, var(--bg) 46%, transparent 100%); }
+.hero::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 30%; z-index: 1; pointer-events: none; background: linear-gradient(transparent, var(--bg)); }
+.hero-bg { position: absolute; inset: 0; z-index: 0; pointer-events: none; display: grid; place-items: center; transform: translate3d(0, var(--py, 0), 0) scale(1.04); will-change: transform; }
+.session-wrap { width: min(1100px, 92vw); }
+.session { font-family: var(--mono); font-size: clamp(11px, 1.15vw, 15px); line-height: 1.7; margin: 0; white-space: pre; overflow: hidden; color: #2f7d3a; opacity: .5; }
+.session .c { color: #43b14e; font-weight: 600; }
+.session .g { color: #5be052; }
+@media (prefers-color-scheme: dark) { .session { color: #3f9c4a; opacity: .42; } }
+@media (max-width: 760px) { .session { font-size: 10px; line-height: 1.6; white-space: pre-wrap; opacity: .35; } .hero::before { background: radial-gradient(ellipse 130% 50% at 50% 50%, var(--bg) 58%, transparent 100%); } }
+@media (prefers-reduced-motion: reduce) { .hero-bg { transform: translate3d(0,0,0) scale(1.04); } }
+
+/* Terminal blocks in the body stay as before */
+.term, .t { font-family: var(--mono); white-space: pre-wrap; overflow-wrap: anywhere; margin: 0; }
+.term { background: #0b0f0b; color: #d7e7d7; padding: var(--sp-6); font-size: 14px; line-height: 22px; text-align: left; align-self: stretch; }
+.term b { font-weight: 600; color: #fff; }
+.term i { font-style: normal; color: #5be052; }
+.start { max-width: 640px; margin: var(--sp-7) auto 0; }
+.rules { margin-top: var(--sp-9); }
