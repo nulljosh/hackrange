@@ -5,7 +5,8 @@ Proof the dojo actually breaks things, and a stopwatch on it. Two tracks, scored
 ```
 ./pentest/run-juiceshop.sh      # start the target first (pentest track only)
 python3 -I bench/bench.py       # both tracks
-python3 -I bench/bench.py --re  # just the crackmes, no server needed
+python3 -I bench/bench.py --re        # just the crackmes, no server needed
+python3 -I bench/bench.py --leetcode  # just the algorithms
 ```
 
 ## How it scores

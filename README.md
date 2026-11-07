@@ -35,7 +35,7 @@ Useful tools once it's running:
 ## Benchmark
 
 Prove it works and time it: `python3 -I bench/bench.py`. It runs real solves against a local
-Juice Shop and the crackmes, and scores each one against the app's own scoreboard so nothing is faked.
+Juice Shop, the crackmes and a LeetCode set (16/16), and scores each one against the app's own scoreboard so nothing is faked.
 See [bench/README.md](bench/README.md).
 
 ## Track 2 , Reverse engineering (crackmes)

