@@ -8,6 +8,6 @@ The moment it pays off looks like this: `./run-juiceshop.sh`, open the console, 
 
 It's a home gym, not a gym membership. Nobody drives across town to lift for twenty minutes, so nobody does it. Put the equipment in the garage and it gets used.
 
-v0 is exactly this: two local tracks, self-tracked progress, one Mac. There's no v1 planned beyond adding more crackmes and maybe a third track — this isn't a product, it's a dojo, and dojos don't need a business model.
+v0 is exactly this: two local tracks, self-tracked progress, one Mac. There's no v1 planned beyond adding more crackmes and maybe a third track, this isn't a product, it's a dojo, and dojos don't need a business model.
 
-Repo: nulljosh/hackrange (private). Rules are simple and non-negotiable: only attack Juice Shop on localhost and the crackmes in this repo, never anything you don't own or have written permission to test.
+Repo: nulljosh/hackrange. Rules are simple and non-negotiable: only attack Juice Shop on localhost and the crackmes in this repo, never anything you don't own or have written permission to test.

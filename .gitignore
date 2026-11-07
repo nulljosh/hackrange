@@ -1,4 +1,5 @@
 .DS_Store
 *.log
-pentest/juice-shop/node_modules/
 pentest/juice-shop/
+re/bin/
+.wrangler/

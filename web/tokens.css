@@ -1,0 +1,35 @@
+/* Hackrange design tokens, the house system with one accent of its own. Everything sits on an 8 point grid. Light first, dark follows the system. */
+:root {
+  --accent: #0a7a1f;
+  --accent-light: #35d62c;   /* icon gradient top */
+  --bg: #ffffff;
+  --bg2: #f5f5f7;
+  --text: #1d1d1f;
+  --text2: #6e6e73;
+  --border: rgba(60, 60, 67, .18);
+
+  --font: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --size-large-title: 34px;  /* 41 line, bold, -0.022em */
+  --size-title: 22px;        /* 28 line, bold */
+  --size-body: 17px;         /* 24 line */
+  --size-subhead: 15px;      /* 20 line */
+  --size-footnote: 13px;     /* 18 line */
+
+  --s1: 4px; --s2: 8px; --s3: 12px; --s4: 16px; --s5: 24px; --s6: 32px; --s7: 48px;
+  --page: 20px;
+  --measure: 680px;
+
+  --control: 48px;
+  --r-card: 28px;
+  --r-group: 20px;
+  --r-pill: 999px;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #000000;
+    --bg2: #1c1c1e;
+    --text: #f5f5f7;
+    --text2: rgba(235, 235, 245, .62);
+    --border: rgba(84, 84, 88, .55);
+  }
+}

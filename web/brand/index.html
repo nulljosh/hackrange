@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hackrange brand kit</title>
+<meta name="description" content="Hackrange's mark, colour, type, space and terminal, in one page.">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/tokens.css">
+<link rel="stylesheet" href="/landing.css">
+<style>
+section { padding: var(--sp-8) 0; border-top: 1px solid var(--line); }
+header.top { padding: var(--sp-9) 0 var(--sp-8); text-align: center; }
+header.top h1 { font-size: clamp(44px, 7vw, 96px); }
+h2 { font-size: clamp(32px, 4vw, 48px); margin-bottom: var(--sp-3); }
+.intro { color: var(--sub); max-width: 620px; margin-bottom: var(--sp-6); }
+.grid { display: grid; gap: var(--sp-4); grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); }
+.card { border: 1px solid var(--line); padding: var(--sp-5); }
+.card small { display: block; color: var(--sub); font-size: 13px; line-height: 18px; margin-top: var(--sp-2); }
+.sw { height: 96px; margin-bottom: var(--sp-3); border: 1px solid var(--line); }
+code { font: 13px/18px var(--mono); }
+.marks { display: flex; flex-wrap: wrap; align-items: flex-end; gap: var(--sp-6); }
+.marks img { display: block; border-radius: 22.5%; margin-bottom: var(--sp-2); }
+.marks figure { font-size: 13px; color: var(--sub); text-align: center; }
+.on { display: grid; grid-template-columns: 1fr 1fr; gap: var(--sp-4); margin-top: var(--sp-6); }
+.on div { height: 160px; display: grid; place-items: center; border: 1px solid var(--line); }
+.on i { display: block; width: 96px; height: 96px; background: currentColor; -webkit-mask: url(mark.svg) center / contain no-repeat; mask: url(mark.svg) center / contain no-repeat; }
+.on .a { background: var(--btn); color: #fff; border: 0; }
+.on .b { color: var(--accent); }
+.type p { border-bottom: 1px solid var(--line); padding: var(--sp-4) 0; display: flex; justify-content: space-between; align-items: baseline; gap: var(--sp-4); }
+.type span:last-child { color: var(--sub); font-size: 13px; white-space: nowrap; }
+.bar { display: flex; align-items: center; gap: var(--sp-4); margin-bottom: var(--sp-2); font-size: 13px; color: var(--sub); }
+.bar b { height: 16px; background: var(--accent); }
+.row { display: flex; flex-wrap: wrap; gap: var(--sp-2); }
+</style>
+</head>
+<body>
+<header class="nav" aria-label="Site">
+  <a class="nav-brand" href="/" aria-label="Hackrange home"><img src="/icon.svg" alt="" width="28" height="28"><span>Hackrange</span></a>
+</header>
+<main class="wrap">
+<header class="top"><p class="label">Brand kit</p><h1>One target, one keyhole</h1><p class="body">The range you shoot at and the lock you are there to open. Everything else is the shared house system with one green accent.</p></header>
+<section><h2>Mark</h2><p class="intro">A flat white glyph on a green tile. It stays readable at 16 pixels. Clear space equals the ring's stroke.</p>
+<div class="marks">
+<figure><img src="/icon.svg" width="160" height="160" alt="Hackrange icon">160</figure>
+<figure><img src="/icon.svg" width="64" height="64" alt="">64</figure>
+<figure><img src="/icon.svg" width="29" height="29" alt="">29</figure>
+<figure><img src="/icon.svg" width="16" height="16" alt="">16</figure>
+</div>
+<div class="on"><div class="a"><i></i></div><div class="b"><i></i></div></div></section>
+<section><h2>Colour</h2><p class="intro">Green is for actions, links and the icon. Never brown, beige, purple or teal, and never green text on green.</p>
+<div class="grid">
+<div class="card"><div class="sw" style="background:#0a7a1f"></div><b>Accent</b><small><code>#0a7a1f</code>, 5.5:1 with white</small></div>
+<div class="card"><div class="sw" style="background:#35d62c"></div><b>Gradient top</b><small><code>#35d62c</code>, the icon only</small></div>
+<div class="card"><div class="sw" style="background:#5be052"></div><b>Accent on dark</b><small><code>#5be052</code>, links and the terminal</small></div>
+<div class="card"><div class="sw" style="background:#0b0f0b"></div><b>Terminal</b><small><code>#0b0f0b</code>, both themes</small></div>
+</div></section>
+<section class="type"><h2>Type</h2><p class="intro">The system font, and the system mono for anything a machine said. No webfonts.</p>
+<p><span style="font-size:34px;line-height:41px;font-weight:700">Large title</span><span>34/41 bold</span></p>
+<p><span style="font-size:22px;line-height:28px;font-weight:700">Title</span><span>22/28 bold</span></p>
+<p><span>Body</span><span>17/24</span></p>
+<p><span style="font-size:15px;line-height:20px">Subhead</span><span>15/20</span></p>
+<p><span style="font-family:var(--mono);font-size:14px">x1 = 0x10000059d</span><span>mono 14/22</span></p></section>
+<section><h2>Space and shape</h2><p class="intro">The 8 point grid. Square corners on buttons and terminals, because the subject is a terminal. Controls are 48 points tall.</p>
+<div class="bar"><b style="width:8px"></b>8</div><div class="bar"><b style="width:16px"></b>16</div><div class="bar"><b style="width:24px"></b>24</div><div class="bar"><b style="width:32px"></b>32</div><div class="bar"><b style="width:48px"></b>48</div><div class="bar"><b style="width:64px"></b>64</div><div class="bar"><b style="width:96px"></b>96</div></section>
+<section><h2>Components</h2><p class="intro">Buttons, then the terminal, the one thing that is ours. Every block is real output, never mocked up.</p>
+<div class="row"><a class="btn btn-solid" href="/#start">Start hacking</a><a class="btn btn-ghost" href="/brand/">Read the source</a></div>
+<pre class="term start"><b>$ strings re/bin/crackme2</b>
+license key:
+invalid
+valid
+
+<i>No key in there. Time to read the loop.</i></pre></section>
+<section><h2>Voice</h2><p class="intro">Plain and direct. Say what happens on the machine, and always name the rule: only attack what you own or have written permission to test. No skulls, no hoodies, no Matrix rain.</p></section>
+</main>
+<footer class="foot"><p class="legal">&copy; 2026 Joshua Trommel &middot; MIT License</p></footer>
+</body>
+</html>
