@@ -5,8 +5,6 @@
   var band = document.querySelector('.word-band'), canvas = band && band.querySelector('canvas');
   if (!canvas) return;
 
-  var mark = new Image(), tints = {};
-  mark.src = 'mark.svg';
 
   // Each glyph is drawn white on a 100 unit square.
   var GLYPHS = [
@@ -83,7 +81,6 @@
   }
   band.classList.add('live');
   draw();
-  mark.addEventListener('load', draw);
   // iOS fires resize as the toolbar slides; only a width change needs a redraw
   window.addEventListener('resize', function () { if (Math.round(canvas.clientWidth * Math.min(window.devicePixelRatio || 1, 2)) !== drawnW) draw(); });
   matchMedia('(prefers-color-scheme: dark)').addEventListener('change', draw);
