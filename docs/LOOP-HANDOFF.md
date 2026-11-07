@@ -9,6 +9,7 @@ RULES.md binds it. Targets are 127.0.0.1 or a listed training platform, nothing 
 ## Where things stand
 
 - Public repo nulljosh/hackrange under Apache 2.0, with a v0.1.0 release on GitHub.
+- Hero terminal animation is committed (b8ce626): it types out a real pentest session line by line and loops. It was not redeployed at this checkpoint.
 - Landing is live at hackrange.jaybulb.com (and hackrange.pages.dev), deployed with `env -u CLOUDFLARE_API_TOKEN npx wrangler pages deploy web --project-name hackrange`. A push deploys nothing.
 - Benchmark 19/19: pentest 9/9, reverse engineering 2/2, LeetCode 8/8. Every pentest solve is checked against Juice Shop's own `/api/Challenges` scoreboard.
 - crackme2 is now XOR-obfuscated, so `strings` finds nothing in it. Crackme binaries are gitignored; rebuild with `re/build.sh`.
