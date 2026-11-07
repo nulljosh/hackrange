@@ -144,7 +144,13 @@ h3 { font-size: 28px; line-height: 32px; font-weight: 600; letter-spacing: -.02e
 .session .c { color: #43b14e; font-weight: 600; }
 .session .g { color: #5be052; }
 @media (prefers-color-scheme: dark) { .session { color: #3f9c4a; opacity: .42; } }
-@media (max-width: 760px) { .session { font-size: 10px; line-height: 1.6; white-space: pre-wrap; opacity: .35; } .hero::before { background: radial-gradient(ellipse 130% 50% at 50% 50%, var(--bg) 58%, transparent 100%); } }
+@media (max-width: 760px) {
+  .hero-bg { place-items: start center; padding-top: 72px; transform: translate3d(0, var(--py, 0), 0) scale(1.08); }
+  .session-wrap { width: 94vw; }
+  .session { font-size: 13px; line-height: 2.1; white-space: pre; opacity: .5; }
+  .hero::before { background: radial-gradient(ellipse 150% 34% at 50% 46%, var(--bg) 34%, transparent 100%); }
+  .hero::after { height: 22%; }
+}
 @media (prefers-reduced-motion: reduce) { .hero-bg { transform: translate3d(0,0,0) scale(1.04); } }
 
 /* Terminal blocks in the body stay as before */
