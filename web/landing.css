@@ -160,3 +160,9 @@ h3 { font-size: 28px; line-height: 32px; font-weight: 600; letter-spacing: -.02e
 .term i { font-style: normal; color: #5be052; }
 .start { max-width: 640px; margin: var(--sp-7) auto 0; }
 .rules { margin-top: var(--sp-9); }
+
+/* Hero types itself out (landing.js). Reserved line height keeps the block from reflowing as it fills. */
+.session .ln { min-height: 1.72em; }
+.session .caret { display: inline-block; width: .55ch; margin-left: 1px; color: #5be052; animation: blink 1.05s step-end infinite; vertical-align: baseline; }
+@keyframes blink { 50% { opacity: 0; } }
+@media (prefers-reduced-motion: reduce) { .session .caret { animation: none; } }
