@@ -1,6 +1,6 @@
 # Benchmark
 
-Proof the dojo actually breaks things, and a stopwatch on it. Two tracks, scored honestly.
+Proof the dojo actually breaks things, and a stopwatch on it. Three tracks, scored honestly.
 
 ```
 ./pentest/run-juiceshop.sh      # start the target first (pentest track only)
