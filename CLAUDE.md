@@ -18,3 +18,7 @@ A pentesting dojo that runs entirely on this Mac. No VM, no Docker. Public, live
 
 ## Deploy
 `env -u CLOUDFLARE_API_TOKEN npx wrangler pages deploy web --project-name hackrange`. A push deploys nothing.
+
+## The loop
+
+The loop handoff is in `docs/LOOP-HANDOFF.md`: what the loop does, where things stand, what is next, and the restart prompt. Read it before restarting the loop.
